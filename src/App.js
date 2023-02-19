@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Switch,
+  
 } from "react-router-dom";
 import { publicRoutes } from "src/routes";
-import { DefaultLayout } from "src/components/GlobalStyle/Layouts";
+import { DefaultLayout } from "src/components/Layouts";
 import { Fragment } from "react";
 
 function App() {

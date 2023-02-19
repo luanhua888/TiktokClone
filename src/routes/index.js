@@ -5,7 +5,7 @@ import Upload from "src/pages/Upload/index.js";
 import Search from "src/pages/Search/index.js";
 
 //Layouts
-import {HeaderOnly} from "src/components/GlobalStyle/Layouts/index.js";
+import {HeaderOnly} from "src/components/Layouts";
 
 
 const publicRoutes = [

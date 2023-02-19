@@ -1,11 +1,9 @@
-import Header from "./Header";
 
 import React from "react";
 
-function DefaultLayout({ children }) {
+function HeaderOnly({ children }) {
   return (
     <div>
-      <Header />
       <div className="container">
         <div className="content">{children}</div> 
       </div>
@@ -13,4 +11,4 @@ function DefaultLayout({ children }) {
   );
 }
 
-export default DefaultLayout;
+export default HeaderOnly;

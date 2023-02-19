@@ -9,6 +9,7 @@ import { publicRoutes } from "src/routes";
 import { DefaultLayout } from "src/components/Layouts";
 import { Fragment } from "react";
 
+
 function App() {
   return (
     <Router>

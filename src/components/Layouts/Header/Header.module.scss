@@ -1,13 +1,105 @@
-.wrapper{
-    height: 60px;
-    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.wrapper {
+  width: 100%;
+  height: var(--deafult-layout-header-height, 60px);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+  display: flex;
+  justify-content: center;
+
+  --search-boder-radius: 92px;
+  --search-height: 46px;
+  --search-top-space: 9px;
 }
 
-.inner{
-    height: 100%;
-    width: 1150px;
-    background-color: #ccc;
+.inner {
+  height: 100%;
+  width: var(--default-layout-width, 1150px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+}
+.search {
+  width: 361px;
+  background-color: rgba(22, 24, 35, 0.06);
+  border-radius: var(--search-boder-radius);
+  display: flex;
+  padding-left: 16px;
+  height: var(--search-height);
+  position: relative;
+
+  input {
+    flex: 1;
+    color: var(--black);
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 12px 0px;
+    caret-color: var(--primary);
+    
+
+
+  }
+
+ 
+
+    //nếu ô input có giá trị thì màu của icon search sẽ đổi
+    &:not(:focus-within):not(:empty) {
+        .search-icon {
+            color: rgba(22, 24, 35, 0.34);
+        }
+    }
+  
+
+  &::after {
+    content: "";
+    position: relative;
+    top: var(--search-top-space);
+    height: calc(var(--search-height) - 18px);
+    width: 1px;
+    background: rgba(22, 24, 35, 0.12);
+    right: 52px;
+  }
+
+  //forcus
+    &:focus-within {
+       border: 1.5px solid rgb(22, 24, 35,0.2);  
+    }
+}
+
+.clear, .loading {
+  border: none;
+  outline: none;
+  // chồng lên clear
+    position: absolute;
+    right: 68px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+
+.search-btn {
+  
+  width: 52px;
+  border: none;
+  outline: none;
+  border-top-right-radius: var(--search-boder-radius);
+  border-bottom-right-radius: var(--search-boder-radius);
+  
+  font-size: 1.4rem;
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(22, 24, 35, 0.03);
+  }
+
+  
+
+ 
+   
+
+
 }

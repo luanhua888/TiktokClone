@@ -1,17 +1,51 @@
 import React from "react";
 import classNames from "classnames/bind";
-import styles from 'src/components/Layouts/Header/Header.module.scss';
+import styles from "src/components/Layouts/Header/Header.module.scss";
+import images from "src/assets/images/index.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleXmark,
+  faMagnifyingGlass,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
 
 function Header() {
   return (
-      <header className={cx("wrapper")}>
-        <div className={cx('inner')}>
-            {/* Logo */}
-            {/* Search */}
+    <header className={cx("wrapper")}>
+      <div className={cx("inner")}>
+        <div className={cx("logo")}>
+          <img src={images.logo} alt="logoTiktok" />
         </div>
-      </header>
+
+        <div className={cx("search")}>
+          <input placeholder="Search accounts and videos" spellCheck={false} />
+          <button className={cx("clear")}>
+            <FontAwesomeIcon icon={faCircleXmark} />
+          </button>
+
+          {/* icon loading */}
+          <FontAwesomeIcon className={cx("loading")} icon={faSpinner} />
+
+          <button className={cx("search-btn")}>
+            <FontAwesomeIcon
+              className={cx("search-icon")}
+              icon={faMagnifyingGlass}
+
+
+            
+            />
+          </button>
+        </div>
+
+        {/* Action */}
+        <div className={cx("action")}>
+          <button className={cx("btn-upload")}>Upload</button>
+        </div>
+
+      </div>
+    </header>
   );
 }
 

@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 9px 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.infor {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  .fullname {
+    font-weight: 600;
+    color: #161823;
+  }
+}
+
+.check {
+  //    màu của icon
+  color: rgb(32, 213, 236);
+  font-size: 12px;
+  margin-left: 4px;
+}
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.username {
+  font-size: 14px; //
+  color: rgba(119, 120, 131, 0.75);
+}

@@ -10,6 +10,7 @@ import {
   faMagnifyingGlass,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
+import AccountsItem from "src/components/AccountItem";
 
 const cx = classNames.bind(styles);
 
@@ -18,7 +19,7 @@ function Header() {
 
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      setSearchResult([]);
     }, 1000);
   });
 
@@ -36,9 +37,13 @@ function Header() {
           render={(attrs) => (
             <div {...attrs} className={cx("search-Result")} tabIndex="1">
               <PopperWrapper>
-                <h4 className={cx('search-title')}>
+                <div className={cx('search-title')}>
                     Accounts
-                </h4>
+                </div>
+                <AccountsItem />
+                <AccountsItem />
+                <AccountsItem />
+                <AccountsItem />
               </PopperWrapper>
             </div>
           )}

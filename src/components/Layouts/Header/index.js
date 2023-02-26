@@ -11,6 +11,7 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import AccountsItem from "src/components/AccountItem";
+import Button from "src/components/Button/index.js";
 
 const cx = classNames.bind(styles);
 
@@ -19,7 +20,7 @@ function Header() {
 
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult([]);
+      setSearchResult([1,2,3,4,5]);
     }, 1000);
   });
 
@@ -37,9 +38,7 @@ function Header() {
           render={(attrs) => (
             <div {...attrs} className={cx("search-Result")} tabIndex="1">
               <PopperWrapper>
-                <div className={cx('search-title')}>
-                    Accounts
-                </div>
+                <div className={cx("search-title")}>Accounts</div>
                 <AccountsItem />
                 <AccountsItem />
                 <AccountsItem />
@@ -70,8 +69,9 @@ function Header() {
         </Tippy>
 
         {/* Action */}
-        <div className={cx("action")}>
-          <button className={cx("btn-upload")}>Upload</button>
+        <div className={cx("actions")}>
+          <Button primary>Log in</Button>
+          <Button outline medium>Log in</Button>
         </div>
       </div>
     </header>

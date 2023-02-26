@@ -5,7 +5,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    // background-color: rgba(22, 24, 35, 0.03);
   }
 }
 
@@ -23,6 +23,7 @@
   .fullname {
     font-weight: 600;
     color: #161823;
+    // color: orangered;
   }
 }
 

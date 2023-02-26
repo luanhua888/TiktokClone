@@ -7,8 +7,12 @@ import Tippy from "@tippyjs/react/headless";
 import { Wrapper as PopperWrapper } from "src/components/Layouts/Popper";
 import {
   faCircleXmark,
+  faCloudUpload,
   faMagnifyingGlass,
+  faSign,
+  faSignIn,
   faSpinner,
+  faUpload,
 } from "@fortawesome/free-solid-svg-icons";
 import AccountsItem from "src/components/AccountItem";
 import Button from "src/components/Button/index.js";
@@ -20,7 +24,7 @@ function Header() {
 
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult([1,2,3,4,5]);
+      setSearchResult([1, 2, 3, 4, 5]);
     }, 1000);
   });
 
@@ -70,8 +74,24 @@ function Header() {
 
         {/* Action */}
         <div className={cx("actions")}>
-          <Button primary>Log in</Button>
-          <Button outline medium>Log in</Button>
+          <Button
+            text
+            leftIcon={
+              <FontAwesomeIcon className={cx("search-icon")} icon={faUpload} />
+            }
+          >
+            Upload
+          </Button>
+
+          <Button
+            primary
+            rounded
+            rightIcon={
+              <FontAwesomeIcon className={cx("search-icon")} icon={faSignIn} />
+            }
+          >
+            Log in
+          </Button>
         </div>
       </div>
     </header>
